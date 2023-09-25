@@ -31,4 +31,4 @@ Procedemento
     imprimilos teñamos 2 follas e non 3 (sendo esta última en branco):
 
         template-r-exams$ bash 4-changes-css-html.sh #Modificar css
-        template-r-exams$ firefox notas/*/*html #Ver notas do alumnado
+        template-r-exams$ firefox nops_eval/*/*html #Ver notas do alumnado
