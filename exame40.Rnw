@@ -1,0 +1,14 @@
+\begin{question} 
+Texto da pregunta
+  \begin{answerlist}
+    \item Opción 1
+    \item Opción 2
+    \item Opción 3
+    \item Ningunha das outras
+  \end{answerlist}
+\end{question}
+   
+\exname{Pregunta40} 
+\extype{schoice} 
+\exsolution{1000} %Modificar 1000 pola opción correcta (1000, 0100, 0010 ou 0001) 
+\exshuffle{4}

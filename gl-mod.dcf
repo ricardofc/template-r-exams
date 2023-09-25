@@ -1,0 +1,33 @@
+PersonalData: Datos persoais
+Name: Nome completo
+FamilyName: Apelidos
+GivenName: Nome
+Signature: Firma
+RegistrationNumber: DNI
+Checked: verificado
+NoChanges: \textbf{Non} facer modificaci{\'o}ns nesta secci{\'o}n.
+DocumentType: Tipo
+DocumentID: Identificador do exame
+Scrambling: Remostraxe
+Replacement: Reemprazamento
+MarkCarefully: Marque as caixas con coidado
+NotMarked: Non marcado
+Or: ou
+MarkExampleA: 70
+MarkExampleB: 77
+MarkExampleC: 101
+MarkExampleD: 108
+MarkExampleE: 114
+Warning: Para cubrir utilizar \textbf{bol{\'\i}grafo azul ou negro}. \\ \textbf{S{\'o} ser{\'a}n avaliadas marcas lexibles e correctamente posicionadas! NON DOBRAR} \\ \textbf{Correcta: +0,25puntos | Incorrecta: -0.125puntos | En branco: NON resta}
+Answers: Respostas
+FillAnswers: Deseguido, marca as t{\'u}as respostas. 
+Point: punto
+Points: puntos
+ExamResults: Resultados do exame
+Evaluation: Avaliaci{\'o}n
+Mark: Cualificaci{\'o}n
+Question: Pregunta
+GivenAnswer: Resposta dada
+CorrectAnswer: Resposta correcta
+ExamSheet: Folla do exame
+Babel: galician
