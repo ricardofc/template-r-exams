@@ -8,6 +8,7 @@
 library(exams)
 dir <- getwd()
 csvFile <- file.path(dir, "DNIAlumnado.csv")
+languageFile <- file.path(dir, "gl-mod.dcf")
 nomes <- character(0)
 dnis <- character(0)
 
@@ -38,7 +39,7 @@ ev1 <- nops_eval(
   scans = Sys.glob("nops_scan/nops_scan_*.zip"),
   eval = exams_eval(partial = FALSE, negative = 0.5),
   interactive = FALSE,
-  language = "gl",
+  language = languageFile,
   mark = FALSE
 )
 dir()

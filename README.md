@@ -16,7 +16,10 @@ Prerrequisitos
 Procedemento
 ------------
 
-0.  Modificar as 40 preguntas \[*exame1.Rnw,exame40.Rnw*\] e o arquivo DNIAlumnado.csv (datos alumnado)
+`Crear os exames (1-exame.R)` ➝ `imprimilos` ➝ `alumnado resolve os exames` ➝ `escanear plantillas` ➝ `procesar cos scripts R (2-scan.R, 3-aval.R)` ➝ `html coas notas` ➝ `depurar css (4-changes-css-html.sh)` ➝ `crear pdfs (wkhtmltopdf, pdftk)`
+
+
+0.  Modificar as 40 preguntas \[*exame1.Rnw,exame40.Rnw*\], o arquivo DNIAlumnado.csv (datos alumnado) e o logo Rlogo.png
 
 1.  Executar script *1-exame.R*
 
