@@ -10,15 +10,16 @@
 
 
 args <- commandArgs(trailingOnly = TRUE)
-if (length(args) == 0 || length(args) < 4) {
-  stop("Executar con 5 argumentos:\n
+if (length(args) == 0 || length(args) < 6) {
+  stop("Executar con 6 argumentos:\n
   [1] numQuestions: Número enteiro comprendido entre 1 e 40\n
   [2] institutionText: Título\n
   [3] namePDF: Nome dos ficheiros PDF a xerar\n
   [4] groupNumber: Texto que identifica o grupo\n
   [5] numberPDF: Número de exames PDF a xerar\n
+  [6] data: Data do exame\n
   \n
-  Exemplo: Rscript 1-exame.R 40 \"Taller SMR2 - Módulo ...\" \"Test-ABCD_alumno\" \"2A\" 32\n\n")
+  Exemplo: Rscript 1-exame.R 40 \"Taller SMR2 - Módulo ...\" \"Test-ABCD_alumno\" \"2A\" 32 2023-09-25\n\n")
 }
 if (!grepl("^\\d+$", args[1]) || as.integer(args[1]) > 40 || as.integer(args[1]) == 0) {
   stop("Parámetro 1: numQuestions debe ser un número enteiro comprendido entre 1 e 40!!!")
@@ -35,6 +36,15 @@ if (!is.character(args[4])) {
 if (!grepl("^\\d+$", args[5]) || as.integer(args[5]) > 50 || as.integer(args[5]) == 0) {
   stop("Parámetro 5: numberPDF debe ser un número enteiro comprendido entre 1 e 50!!!")
 }
+data <- tryCatch({
+  as.Date(args[6])
+}, error = function(e) {
+  NA  
+})
+if (is.na(data)) {
+  stop("Parámetro 6: data non é unha data en formato válido (Sys.Date()).\n")
+}
+
 
 ##############
 library(exams)
@@ -66,7 +76,6 @@ valueQuestion <- round(10 / numQuestions, 2)
 institutionText <- as.character(args[2])
 namePDF <- as.character(args[3])
 
-data <- Sys.Date()
 dir <- getwd()
 languageFile <- file.path(dir, "gl-mod.dcf")
 logoFile <- file.path(dir, "Rlogo.png")

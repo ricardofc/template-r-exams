@@ -3,10 +3,20 @@ template-r-exams
 
 Template r-exams (about <https://www.r-exams.org/>)
 
+Prerrequisitos
+--------------
+        $ sudo apt update
+        $ sudo apt -y install r-base r-base-core r-base-dev libcurl4-openssl-dev libmagick++-dev pandoc texlive-lang-spanish
+
+        $ sudo Rscript -e 'install.packages("exams", dependencies = TRUE)' #https://www.r-exams.org/tutorials/installation/
+
+        $ sudo apt -y install wkhtmltopdf #Convertir html a pdf
+        $ sudo apt -y install pdftk #Manipulación de ficheiros PDF
+
 Procedemento
 ------------
 
-0.  Escribir as 40 preguntas \[*exame1.Rnw,exame40.Rnw*\]
+0.  Modificar as 40 preguntas \[*exame1.Rnw,exame40.Rnw*\] e o arquivo DNIAlumnado.csv (datos alumnado)
 
 1.  Executar script *1-exame.R*
 
@@ -31,4 +41,6 @@ Procedemento
     imprimilos teñamos 2 follas e non 3 (sendo esta última en branco):
 
         template-r-exams$ bash 4-changes-css-html.sh #Modificar css
-        template-r-exams$ firefox nops_eval/*/*html #Ver notas do alumnado
+        template-r-exams$ firefox nops_eval/*/*html & #Ver notas do alumnado
+        template-r-exams$ pdftk nops_eval/*/*pdf cat output ALL.pdf & #Xerar 1 arquivo PDF con todas as notas do alumnado
+
