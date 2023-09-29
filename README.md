@@ -45,5 +45,5 @@ Procedemento
 
         template-r-exams$ bash 4-changes-css-html.sh #Modificar css
         template-r-exams$ firefox nops_eval/*/*html & #Ver notas do alumnado
-        template-r-exams$ pdftk nops_eval/*/*pdf cat output ALL.pdf & #Xerar 1 arquivo PDF con todas as notas do alumnado
+        template-r-exams$ pdftk $(ls -v nops_eval/*/*pdf) cat output ALL.pdf & #Xerar 1 arquivo PDF con todas as notas do alumnado
 

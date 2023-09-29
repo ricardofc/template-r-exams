@@ -9,7 +9,7 @@
 DIR="$(pwd)/nops_eval"
 
 ##main()
-for i in $(ls ${DIR}/*/*html)
+for i in $(ls -v ${DIR}/*/*html)
 do
   echo '-----------------'
   echo Procesando $i
