@@ -16,6 +16,7 @@ do
   NUM=$(grep -n '</style>' $i | cut -d ':' -f1)
   sed -i "${NUM}s|</style>|h3 {margin-bottom:10px;}\nimg {margin-bottom:-40px; max-width: 98%; height: auto;}\ntr {line-height:1;}\n</style>|" $i 
   sed -i "s|<h3>Folla do exame|<h3 style='page-break-before:always;'>Folla do exame|" $i
+  sed -i "39,78s|\.|,|" $i
   PDF_FILE=$(echo $i | sed "s/.html/.pdf/")
   wkhtmltopdf $i ${PDF_FILE}
 done
